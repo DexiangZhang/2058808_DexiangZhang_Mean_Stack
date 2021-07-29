@@ -1,0 +1,41 @@
+body {
+    background-color: antiquewhite;
+}
+
+h1, h2, h3, h4, h5, h6 {
+   text-align: center;
+   color:blueviolet;
+}
+
+div {
+    background-color: palegoldenrod;
+}
+
+
+p {
+    display: inline-block;
+    margin: 3em;
+    font-size: 1.3em;
+    text-decoration: underline;
+    color: blueviolet;
+}
+
+.header {
+    border: 0.2rem black solid;
+    margin: 2em;
+    padding: 2em;
+
+}
+
+.main {
+    border: 0.2rem black solid;
+    margin: 2em;
+    padding: 2em;
+}
+
+.footer {
+    border: 0.2rem black solid;
+    margin: 2em;
+    padding: 2em;
+    text-align: center;
+}
