@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Program Managers</title>
+    <link rel="stylesheet" href="./CSS/manager.css" />
+  </head>
+  <body>
+    <form id="new_form">
+      <h1>Add New Budget</h1>
+      <label for="client_name">Client Name</label>
+      <input type="text" name="client_name" id="client" />
+      <br /><br />
+
+      <label for="project_name">Project Name</label>
+      <input type="text" name="project_name" id="project" />
+      <br /><br />
+
+      <label for="budget_amount">Budget Amount</label>
+      <input type="number" name="budget_amount" id="budget" />
+      <br /><br />
+
+      <input type="button" value="Add" id="add_button" onclick="storeData()" />
+      <input type="reset" value="Clear" id="clear_button" />
+    </form>
+
+    <a href="./index.html">Back To Home</a>
+
+    <script src="./JS/manager.js"></script>
+  </body>
+</html>

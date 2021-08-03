@@ -1,0 +1,40 @@
+body {
+  background-color: antiquewhite;
+}
+
+label {
+  margin-right: 0.7em;
+}
+
+a {
+  font-size: 1.5em;
+  padding-left: 45%;
+}
+
+a:hover {
+  color: cadetblue;
+}
+
+#new_form {
+  text-align: center;
+  font-size: 1.5em;
+  margin-top: 10%;
+  padding-bottom: 1.5em;
+}
+
+#add_button,
+#clear_button {
+  border-radius: 40%;
+  text-transform: uppercase;
+  padding: 2em;
+  border: 4px solid;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  margin: auto 1.5em;
+  font-size: 0.5em;
+}
+
+#add_button:hover,
+#clear_button:hover {
+  background: #f6b93b;
+}
