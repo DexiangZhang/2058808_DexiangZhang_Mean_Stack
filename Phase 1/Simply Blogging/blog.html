@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simply Blogging</title>
+
+    <!-- CSS files -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./CSS/blog.css" />
+    <!-- CSS files -->
+  </head>
+  <body class="bg-info">
+    <!-- naviagator -->
+    <nav class="navbar navbar-dark bg-dark sticky-top">
+      <a class="navbar-brand" href="./blog.html">Simply Blogging</a>
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#form_section">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#N/A">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#N/A">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#N/A">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- naviagator -->
+
+    <!-- form -->
+    <div class="container" id="form_section">
+      <h1>Add New Blog</h1>
+      <form class="form-group">
+        <label for="title_name">Title</label>
+        <input
+          type="text"
+          class="form-control"
+          id="title_name"
+          placeholder="Enter Title"
+          
+        />
+
+        <label for="detail">Detail</label>
+        <textarea
+          class="form-control"
+          id="detail"
+          rows="3"
+          placeholder="Enter Detail"
+          
+        ></textarea>
+
+        <label for="image_URL">Image URL</label>
+        <input
+          type="text"
+          class="form-control"
+          id="image_URL"
+          placeholder="Paste the URL"
+          
+        />
+
+        <div class="buttons">
+          <input
+            type="button"
+            value="Add Blog"
+            class="btn btn-success"
+            id="addBut"
+            onclick="addBlog()"
+          />
+          <input
+            type="reset"
+            value="Clear Blog"
+            class="btn btn-danger"
+            id="clearBut"
+          />
+        </div>
+      </form>
+    </div>
+    <!-- form -->
+
+    <!-- Image cards -->
+    <div class="card_section"></div>
+    <!-- Image cards -->
+
+    <!-- Footer -->
+    <footer class="pt-4 bg-dark text-white">
+      <div class="container-fluid text-center">
+        <div class="row">
+          <div class="col-md-6 mt-md-0 mt-3">
+            <h5 class="text-uppercase font-weight-bold">Mark Caine -</h5>
+            <p>
+              “The first step toward success is taken when you refuse to be a
+              captive of the environment in which you first find yourself.”
+            </p>
+          </div>
+          <hr class="w-100 d-md-none pb-3" />
+          <div class="col-md-6 mb-md-0 mb-3">
+            <h5 class="text-uppercase font-weight-bold">Denis Waitley -</h5>
+            <p>
+              “Life is inherently risky. There is only one big risk you should
+              avoid at all costs, and that is the risk of doing nothing.”
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright text-center py-3">
+        2021 Copyright ©
+        <a href="./blog.html"> SIMPLYBLOGGING.COM</a>
+      </div>
+    </footer>
+    <!-- Footer -->
+
+    <!-- JavaScript File-->
+    <script src="./JS/blog.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+    <!-- JavaScript File-->
+  </body>
+</html>

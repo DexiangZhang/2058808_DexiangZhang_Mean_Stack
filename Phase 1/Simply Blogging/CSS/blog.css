@@ -1,0 +1,76 @@
+h1 {
+  text-align: center;
+  color: aqua;
+  font-weight: bold;
+}
+
+label {
+  margin-top: 1.2em;
+  font-size: 1.4em;
+  color: bisque;
+}
+
+.nav-link {
+  font-size: 1.1em;
+  text-transform: uppercase;
+  color: blueviolet;
+}
+
+.navbar-brand {
+  text-transform: uppercase;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.nav {
+  margin-right: 3em;
+}
+
+.navbar {
+  padding-top: 1.1em;
+  padding-bottom: 1.1em;
+}
+
+.nav-item {
+  margin: 0 0.5em;
+}
+
+.nav-link:hover {
+  background-color: whitesmoke;
+}
+
+.container {
+  margin-top: 3em;
+}
+
+.buttons {
+  margin-top: 1em;
+  text-align: center;
+}
+
+.card_section {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row-reverse;
+  flex-wrap: wrap-reverse;
+
+  margin-bottom: 3em;
+}
+
+.card {
+  margin: 2em;
+  width: 18rem;
+}
+
+#addBut,
+#clearBut {
+  margin: 1em 5em;
+  font-size: 1.3em;
+  border-radius: 10%;
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 700px;
+  }
+}
