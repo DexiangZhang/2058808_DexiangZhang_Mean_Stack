@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Menu</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <style>
+        h1 {
+            font-size:3rem;
+            text-align:center;
+            color: white;
+            margin: 0.8em;
+        }
+
+        strong {
+            font-size: 1.8em;
+            padding-bottom: 1em;
+            
+        }
+
+        #nextLink {
+            margin-top: 0.8em;
+            font-size: 1.2em;
+        }
+
+        @media only screen and (max-width: 490px) {
+        #count_section {
+          text-align:center;
+        }
+}
+        
+    </style>
+
+</head>
+<body class="bg-info">
+    
+    <h1>Shopping Cart</h1>
+
+    <div class="alert alert-primary" role="alert" style="margin: auto 4rem" id="count_section">
+        <strong>
+            Cart Item: 
+            <span id="amount">0</span> 
+        </strong> 
+
+        <div id="nextLink">Ready to checkout?
+            <a href="./cartCheckout.html" class="btn btn-success" style="margin-left: 1em;">Checkout Now</a>
+        </div> 
+    </div>
+
+    <div style="margin:2em 2em">
+      <div class="row row-cols-1 row-cols-md-2">
+        <div class="col mb-4 d-flex justify-content-center">
+          <div class="card text-white bg-dark" style="width: 22rem;">
+            <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQk7eTBL_tSfy3lCLR0AeColnTH0Y-sQ5ZZUfLSHzuryYQaz9WKITAlmsbC29QOMOxy98v8Dp8LJz_dZmbxq5Oh8vM-m2VFftg7PNEWdD0&usqp=CAE" class="card-img-top" alt="laptop">
+            <div class="card-body">
+              <h5 class="card-title" id="item_1">ASUS Laptop</h5>
+              <h6 class="card-title" >Price: $<span id="price_1">1489.00</span>  </h6>
+              <button class="btn btn-primary" onclick=" add(1)"> Add to Cart</button>
+            
+            </div>
+          </div>
+        </div>
+
+        <div class="col mb-4 d-flex justify-content-center">
+            <div class="card text-white bg-dark" style="width: 22rem;">
+              <img src="https://i5.walmartimages.com/asr/a67a1e6f-817e-4b27-9331-570e1805ac68_1.e83a8d64215f76d7c45821ca96dc16f8.jpeg?odnWidth=612&odnHeight=612&odnBg=ffffff" class="card-img-top" alt="microwave">
+              <div class="card-body">
+                <h5 class="card-title" id="item_2">Hamilton Microwave</h5>
+                <h6 class="card-title">Price: $<span id="price_2">74.84</span></h6>
+                <button class="btn btn-primary" onclick=" add(2)" > Add to Cart</button>
+                
+              </div>
+            </div>
+          </div>
+        <div class="col mb-4 d-flex justify-content-center">
+          <div class="card text-white bg-dark" style="width: 22rem;">
+            <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcS139lGuxjH7HzZCIxPBI3OUFbvL5PE0QO_3IjpYGKbQVOccy5_-RnseaVzo1ZwDxciKdmjX1yec58jvSJ2kWaOzrSJoySy0w&usqp=CAE" class="card-img-top" alt="iphone_XR">
+            <div class="card-body">
+              <h5 class="card-title" id="item_3">Apple iPhoneXR</h5>
+              <h6 class="card-title">Price: $<span id="price_3">499.99</span></h6>
+              <button class="btn btn-primary" onclick=" add(3)"> Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col mb-4 d-flex justify-content-center">
+          <div class="card text-white bg-dark" style="width: 22rem;">
+            <img src="https://m.media-amazon.com/images/I/61n3uDhMWvL._AC_SL1500_.jpg" class="card-img-top" alt="dehumidifier">
+            <div class="card-body">
+              <h5 class="card-title titleName" id="item_4">SEAVON Dehumidifier</h5>
+              <h6 class="card-title">Price: $<span id="price_4">36.99</span></h6>
+              <button class="btn btn-primary" onclick="add(4)"> Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./TS/functionalities.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+</body>
+</html>
