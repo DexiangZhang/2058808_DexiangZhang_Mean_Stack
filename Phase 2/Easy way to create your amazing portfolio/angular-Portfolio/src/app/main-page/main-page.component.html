@@ -1,0 +1,74 @@
+<!--Register Section-->
+<div class="form" *ngIf="turnReg">
+  <h2>Registration Form</h2>
+
+  <button (click)="RegisterStatus()">Login</button>
+
+  <form [formGroup]="registerRef" (ngSubmit)="submit()">
+    <label for="">First Name</label>
+    <input type="text" formControlName="firstName" /><br />
+    <label for="">Last Name</label>
+    <input type="text" formControlName="lastName" /><br />
+    <label for="">Username</label>
+    <input type="text" formControlName="user" /><br />
+    <label for="">Password</label>
+    <input type="password" formControlName="pass" /><br />
+
+    <input type="submit" value="Register" [disabled]="registerRef.invalid" />
+    <input type="reset" value="Reset" />
+    <br /><br />
+    {{ regMsg }}
+  </form>
+</div>
+
+<!--login Section-->
+<div class="form" *ngIf="turnLogin">
+  <h2>Login Form</h2>
+
+  <button (click)="LoginStatus()">Sign Up</button>
+
+  <form [formGroup]="loginRef" (ngSubmit)="checkUser()">
+    <label for="">Username</label>
+    <input type="text" formControlName="logUser" /><br />
+    <label for="">Password</label>
+    <input type="password" formControlName="logPass" /><br />
+
+    <input type="submit" value="Login" [disabled]="loginRef.invalid" />
+    <br /><br />
+    {{ logMsg }}
+  </form>
+</div>
+
+<!--My Portfolio Section-->
+<div class="main" *ngIf="turnPortfolio">
+  <h2>My Portfolio</h2>
+
+  <h3>Welcome {{ fullName }}</h3>
+  <h4>Account Name: {{ username }}</h4>
+
+  <form [formGroup]="portRef" (ngSubmit)="addNewContact()">
+    <label for="">Contact Name</label>
+    <input type="text" formControlName="contactName" /><br />
+    <label for="">Phone Number</label>
+    <input type="number" formControlName="contactNumber" />
+    <br />
+    <input type="submit" value="Save" [disabled]="portRef.invalid" />
+    <br />
+  </form>
+
+  <br /><br />
+  <input type="button" value="Contact Details" (click)="showTable()" />
+
+  <div *ngIf="turnTable">
+    <table border="1">
+      <tr>
+        <th>Name</th>
+        <th>Phone No.</th>
+      </tr>
+      <tr *ngFor="let info of contactList">
+        <td>{{ info.name }}</td>
+        <td>{{ info.phone }}</td>
+      </tr>
+    </table>
+  </div>
+</div>
