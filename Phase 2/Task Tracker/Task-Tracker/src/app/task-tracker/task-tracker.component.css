@@ -1,0 +1,53 @@
+.body {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 6em;
+}
+
+table {
+  text-align: center;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.section2 {
+  width: 100%;
+}
+
+th,
+td {
+  padding: 0.6em;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-top: 1em;
+}
+
+mat-label {
+  color: #ff9f00;
+}
+
+mat-form-field {
+  color: black;
+}
+
+th {
+  margin: 7em 7em;
+}
+
+button {
+  margin: 1em 3em;
+}
+
+.field {
+  width: 100%;
+}
+
+@media only screen and (max-width: 506px) {
+  #sub-2 {
+    margin-top: 2em;
+  }
+}

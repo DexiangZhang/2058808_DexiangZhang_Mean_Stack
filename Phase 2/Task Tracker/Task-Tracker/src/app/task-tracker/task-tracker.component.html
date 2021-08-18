@@ -1,0 +1,64 @@
+<div class="body">
+  <div class="section1">
+    <h2>Add New Task</h2>
+    <form [formGroup]="subRef" (ngSubmit)="addNewTask()">
+      <mat-form-field class="field" appearance="fill">
+        <mat-label>Employee ID</mat-label>
+        <input matInput type="number" formControlName="id" />
+      </mat-form-field>
+
+      <br />
+
+      <mat-form-field class="field" appearance="fill">
+        <mat-label>Task Name</mat-label>
+        <input matInput type="text" formControlName="name" />
+      </mat-form-field>
+
+      <br />
+
+      <mat-form-field class="field" appearance="fill">
+        <mat-label>Task Detail</mat-label>
+        <textarea matInput formControlName="detail" rows="5"></textarea>
+      </mat-form-field>
+
+      <br />
+
+      <mat-form-field class="field" appearance="fill">
+        <mat-label>Deadline</mat-label>
+        <input matInput type="date" formControlName="time" />
+      </mat-form-field>
+
+      <br />
+      <button
+        type="submit"
+        mat-raised-button
+        color="primary"
+        [disabled]="subRef.invalid"
+      >
+        Add Task
+      </button>
+
+      <button type="reset" mat-raised-button color="red">Reset Task</button>
+    </form>
+  </div>
+
+  <div class="section2">
+    <h2 id="sub-2">Show Tasks</h2>
+    <div>
+      <table mat-table border="2">
+        <tr>
+          <th mat-header-cell>Employee ID</th>
+          <th mat-header-cell>Task Name</th>
+          <th mat-header-cell>Task Detail</th>
+          <th mat-header-cell>Deadline</th>
+        </tr>
+        <tr *ngFor="let task of tasks">
+          <td mat-cell>{{ task.id }}</td>
+          <td mat-cell>{{ task.name }}</td>
+          <td mat-cell>{{ task.detail }}</td>
+          <td mat-cell>{{ task.time }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
