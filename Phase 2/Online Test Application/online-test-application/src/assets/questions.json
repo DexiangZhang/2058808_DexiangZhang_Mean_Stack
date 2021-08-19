@@ -1,0 +1,82 @@
+[
+    {
+        "question": "What does the Internet prefix WWW stand for?",
+        "option_1": "Wide Width Wickets",
+        "option_2": "World Wide Web",
+        "option_3": "Worldwide Weather",
+        "option_4": "Western Washington World",
+        "correct": "World Wide Web"
+    },
+    {
+        "question": "Which of these is not a kind of computer?",
+        "option_1": "Apple",
+        "option_2": "Lenovo",
+        "option_3": "Toshiba",
+        "option_4": "Lada",
+        "correct": "Lada"
+    },
+    {
+        "question": "Who is the maker of the iPhone?",
+        "option_1": "Microsoft",
+        "option_2": "IBM",
+        "option_3": "Apple",
+        "option_4": "Zenith",
+        "correct": "Apple"
+    },
+    {
+        "question": "To make your website mobile friendly, you can make your website?",
+        "option_1": "Responsive",
+        "option_2": "Reactive",
+        "option_3": "Fast Loading",
+        "option_4": "Light",
+        "correct": "Responsive"
+    },
+    {
+        "question": "What does CSS stand for?",
+        "option_1": "Current Style Sheets",
+        "option_2": "Current Sheets Style",
+        "option_3": "Cascading Style Sheets",
+        "option_4": "Cascading Sheets Style",
+        "correct": "Cascading Style Sheets"
+    },
+    {
+        "question": "Which of the following statements is false?",
+        "option_1": "You can make a website without using HTML",
+        "option_2": "You can make a website without using PHP",
+        "option_3": "You can make a website without using CSS",
+        "option_4": "You can make a website without using Javascript",
+        "correct": "You can make a website without using HTML"
+    },
+    {
+        "question": "SQL stands for?",
+        "option_1": "Structured Query Language",
+        "option_2": " Statistical Query Language",
+        "option_3": "Superior Questions Lot",
+        "option_4": "Standard Query Lot",
+        "correct": "Structured Query Language"
+    },
+    {
+        "question": "Which of the following is true about Javascript?",
+        "option_1": "It is a server side scripting language",
+        "option_2": "It is client side scripting language",
+        "option_3": "It is a Software",
+        "option_4": "It is a database",
+        "correct": "It is client side scripting language"
+    },
+    {
+        "question": "What is a CMS in web design?",
+        "option_1": "Content Management System",
+        "option_2": "Creative Management System",
+        "option_3": "Content Mixing System",
+        "option_4": "Creatives Managerial System",
+        "correct": "Content Management System"
+    },
+    {
+        "question": "Which of the following is true about PHP?",
+        "option_1": "It is a server side scripting language",
+        "option_2": "It is client side scripting language",
+        "option_3": "It is a Software",
+        "option_4": "It is a database",
+        "correct": "It is a server side scripting language"
+    }
+]

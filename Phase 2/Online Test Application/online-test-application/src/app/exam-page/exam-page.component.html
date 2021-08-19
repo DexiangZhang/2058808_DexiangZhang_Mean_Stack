@@ -1,0 +1,72 @@
+<div class="body">
+  <form [formGroup]="questionGroup" (ngSubmit)="calculateScore()">
+    <ol>
+      <div *ngFor="let q of exams" class="form-check">
+        <br /><br /><br /><br /><br />
+
+        <li>
+          <p class="problem">{{ q.question }}</p>
+        </li>
+
+        <input
+          class="form-check-input"
+          type="radio"
+          formControlName="{{ q.question }}"
+          value="{{ q.option_1 }}"
+        />
+        <label class="form-check-label"> {{ q.option_1 }}</label>
+
+        <br />
+
+        <input
+          class="form-check-input"
+          type="radio"
+          formControlName="{{ q.question }}"
+          value="{{ q.option_2 }}"
+        />
+        <label class="form-check-label"> {{ q.option_2 }}</label>
+
+        <br />
+
+        <input
+          class="form-check-input"
+          type="radio"
+          formControlName="{{ q.question }}"
+          value="{{ q.option_3 }}"
+        />
+        <label class="form-check-label"> {{ q.option_3 }}</label>
+
+        <br />
+
+        <input
+          class="form-check-input"
+          type="radio"
+          formControlName="{{ q.question }}"
+          value="{{ q.option_4 }}"
+        />
+        <label class="form-check-label"> {{ q.option_4 }}</label>
+      </div>
+    </ol>
+
+    <div class="button">
+      <input
+        type="submit"
+        value="Submit Answer"
+        [disabled]="questionGroup.invalid"
+        *ngIf="turnSubmitButton"
+        class="btn btn-success btn-lg"
+      />
+    </div>
+
+    <div
+      *ngIf="turnResult"
+      class="result"
+      [ngClass]="{ pass: isPass, fail: !isPass }"
+    >
+      <h2>{{ msg }}</h2>
+      <p style="font-weight: bold; font-size: 1.7em">
+        Result: {{ correctCount }} / {{ totalQ }}
+      </p>
+    </div>
+  </form>
+</div>

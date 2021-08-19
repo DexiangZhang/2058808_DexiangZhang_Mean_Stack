@@ -1,0 +1,63 @@
+p {
+  font-size: 1.5em;
+  line-height: 1.2em;
+}
+
+h2 {
+  font-size: 1.8em;
+  background-color: springgreen;
+  padding: 0.3em;
+}
+
+input[type="radio"] {
+  margin-left: 0.3em;
+  margin-right: 0.5em;
+  margin-top: 1.4em;
+}
+
+label {
+  font-size: 1.5rem;
+  margin-top: 1em;
+}
+
+ol {
+  margin-left: 15%;
+}
+
+li {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+.body {
+  font-size: 1.2em;
+  display: flex;
+  justify-content: space-around;
+  color: #505050;
+}
+
+.pass {
+  color: green;
+}
+
+.fail {
+  color: red;
+}
+
+.button {
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.result {
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+@media only screen and (max-width: 550px) {
+  ol {
+    margin-left: auto;
+  }
+}
