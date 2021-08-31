@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatting with iRobot</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <style>
+      body {
+        text-align: center;
+
+        background-image: linear-gradient(
+          180deg,
+          rgb(242, 255, 184),
+          rgb(168, 255, 213)
+        );
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+      }
+
+      div {
+        margin: auto auto;
+        width: 50%;
+        min-height: 200px;
+        height: 350px;
+        overflow: auto;
+        border: medium solid coral;
+      }
+
+      p {
+        text-align: left;
+        margin-left: 1em;
+      }
+
+      h1 {
+        font-size: 4em;
+        font-style: italic;
+      }
+
+      input,
+      label {
+        font-size: 1.4em;
+        margin-left: 0.8em;
+      }
+
+      input[type="button"] {
+        font-size: 1.5em;
+        background-color: #4caf50; /* Green */
+        border-color: #4caf50;
+        color: white;
+        padding: 0.5em 2em;
+        text-align: center;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+      }
+
+      input[type="button"]:hover {
+        box-shadow: 5px 5px 5px #4caf50;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Chat History</h1>
+    <div id="chat"></div>
+
+    <br /><br />
+    <label for="client_name">Username: </label>
+    <input type="text" id="client_name" />
+
+    <label for="client_speech">Message: </label>
+    <input type="text" id="client_speech" /><br />
+    <br />
+
+    <input type="button" value="Send" onclick="sendData()" />
+
+    <!--Javascript section-->
+    <script type="text/javascript">
+      var socket = io();
+      let username = document.getElementById("client_name");
+      let words = document.getElementById("client_speech");
+      let div = document.getElementById("chat");
+
+      let user_reply_time;
+      let server_reply_time;
+
+      function sendData() {
+        // send data from client to server
+        socket.emit("data", words.value);
+
+        user_reply_time = new Date().toLocaleString();
+        let p = document.createElement("p");
+        p.innerHTML = `${username.value} (${user_reply_time}): ${words.value}`;
+        p.style.color = "red";
+        div.appendChild(p);
+
+        // only do once everytime, no accmulcate occurs
+        socket.once("response", (msg) => {
+          server_reply_time = new Date().toLocaleString();
+          let p2 = document.createElement("p");
+          p2.innerHTML = `iRobot (${server_reply_time}): ${msg}`;
+          p2.style.color = "orange";
+          div.appendChild(p2);
+        });
+        words.value = "";
+        username.readOnly = true;
+      }
+    </script>
+    <!--Javascript section-->
+  </body>
+</html>
