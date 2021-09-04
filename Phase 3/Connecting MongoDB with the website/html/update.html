@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update</title>
+    <style>
+      body {
+        text-align: center;
+        font-size: 2em;
+        background-image: linear-gradient(
+          180deg,
+          rgb(242, 255, 184),
+          rgb(168, 255, 213)
+        );
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+      }
+
+      input,
+      label {
+        font-size: 1em;
+        margin-left: 0.8em;
+      }
+
+      input[type="submit"],
+      input[type="reset"] {
+        font-size: 1em;
+        background-color: #4caf50; /* Green */
+        border-color: #4caf50;
+        color: white;
+        padding: 0.5em 1em;
+        margin: 1px 2px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Update Course</h1>
+    <form action="updateFee" method="POST">
+      <label for="">Course ID</label>
+      <input type="number" name="_id" required /><br /><br />
+
+      <label for="">Course Fee</label>
+      <input type="number" name="fee" required /><br /><br />
+
+      <input type="submit" value="Update" /><br /><br />
+    </form>
+
+    <a href="/">Home Page</a>
+  </body>
+</html>
