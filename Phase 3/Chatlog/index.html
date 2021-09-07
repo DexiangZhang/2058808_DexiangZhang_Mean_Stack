@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatting with iRobot</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <style>
+      body {
+        text-align: center;
+
+        background-image: linear-gradient(
+          180deg,
+          rgb(242, 255, 184),
+          rgb(168, 255, 213)
+        );
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+      }
+
+      /* div {
+        margin: auto auto;
+        width: 50%;
+        min-height: 200px;
+        height: 350px;
+        overflow: auto;
+        border: medium solid coral;
+      } */
+
+      p {
+        text-align: left;
+        margin-left: 1em;
+      }
+
+      h1 {
+        font-size: 4em;
+        font-style: italic;
+      }
+
+      input,
+      label {
+        font-size: 1.4em;
+        margin-left: 0.8em;
+      }
+
+      input[type="submit"] {
+        font-size: 1.5em;
+        background-color: #4caf50; /* Green */
+        border-color: #4caf50;
+        color: white;
+        padding: 0.5em 2em;
+        text-align: center;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        box-shadow: 5px 5px 5px #4caf50;
+      }
+
+      textarea {
+        margin-left: 2em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Store Chat History</h1>
+
+    <br /><br />
+
+    <form>
+      <label for="client_name">Username </label><br /><br />
+      <input type="text" id="client_name" /><br /><br /><br />
+
+      <label for="client_speech">Message </label><br /><br />
+      <textarea id="client_speech" cols="36" rows="5"></textarea>
+      <br /><br /><br />
+
+      <input type="submit" value="Send" onclick="sendData()" />
+    </form>
+
+    <!--Javascript section-->
+    <script type="text/javascript">
+      var socket = io();
+      let username = document.getElementById("client_name");
+      let words = document.getElementById("client_speech");
+
+      function sendData() {
+        // send data from client to server
+
+        socket.emit("name", username.value);
+        socket.emit("message", words.value);
+        username.value = "";
+        words.value = "";
+      }
+    </script>
+    <!--Javascript section-->
+  </body>
+</html>
